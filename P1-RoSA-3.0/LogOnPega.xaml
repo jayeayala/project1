@@ -1,0 +1,104 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LogOnPega" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="549.333333333333,819.333333333333" sap2010:WorkflowViewState.IdRef="LogOnPega_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LogOnPega" sap:VirtualizedContainerService.HintSize="476,754.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Sign In | Pega Studio Training Web Application" sap:VirtualizedContainerService.HintSize="434,662.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,444.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT  user_name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="RoSA">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://training.openspan.com/login" DesignTimeRectangle="503, 539, 560, 51" ElementType="InputBox" FriendlyName="'INPUT  user_name'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="388a276a1241a346c9fc4517d5e30b54.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign In | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT  user_pass'" EmptyFieldMode="SingleLine" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" Text="1234">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://training.openspan.com/login" DesignTimeRectangle="503, 623, 560, 51" ElementType="InputBoxPassword" FriendlyName="'INPUT  user_pass'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="e62df7a05a2f8c9e61a1b2c31ea00ae6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign In | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://training.openspan.com/login" DesignTimeRectangle="503, 707, 105, 45" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Sign In' check:text='Sign In' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAxCAYAAADQtCfaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIdSURBVHhe7ZlLbsJAEAVzZ26SNVdhwyG4AHvYIvGZ2Mg2r4due4gY5GdeSbWIjQju8ozz+UmCDkUjRNEIMdF+fk9ypiKKRiKiaCQiikYiomgkIopGIqJoJCKKRiKiaCQiikYiomgkIopGIqJoJCLVo6323Zsbbmk98drd7vn8R91e07H7LOlw8V/zQZGK0c5pY7/XE3kYRYtFqkXzV1iOv+Jm4fdFs6vMrhp77rg/w7kZ+dXRTte0ys/vbt3JBhjI6PaIQ2y4x4b3wfjrQ3ewYbO1X7cUbb1BtPwz5jtKrZsQqbY9mkF54RzDaBgZOAYrNo/k0cYc3t+zIFpE0U3xoki9H0SylYFEF+VHu6Rdd6xlGHYWMo72eG7i8ckVURit/zzmeIXtFKkXrTVYIQPZxbnRgq20NYqAx80NEoRwLYhmw8PNVbizvCJSN9qgXS2GYCD9sN2QvYXPtOH1b45mP8/iomWaFfjYvhQtFqkTLRgm6g1W0WKROtHwghvGht0yFs28Nhs0xlG0N4iDGwUu0B+IfR4OEbLwivYW7bB97J+xwoFkgXpKfk9TtH+IF4l4z7p4II1ZuPt5OKZoLEK0p8gLE5l/NLzjGx4rx/7h2ayoBYoQrLTp/8tNbnULEKHZHqNn49K3xV6E+5n2RSKKRiKiaCQiikYiomgkIopGIqJoJCKKRiKiaCQiikYiomgkIiaa4EDRCFE0OlL6A5rnpE78DUS2AAAAAElFTkSuQmCC" InformativeScreenshot="fa74ad41e486d671f7c313510eaa151a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sign In | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" Text="Sign In" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAABJcSURBVGhDvZkHWBTn1sfxJkpvUmLKfRKNJhpAEaUpKmpsVEFUiojYo1GJgiKiKEiVbuwYS+zGRmyIwMLuwlJ32UpZ7NFo8l1uys39EpL9f+ed3UVMNN4vMfc8z//ZYWZn5v8757zvzLsYvIiwDVkUMyD/DM/hc1WnY1lHl2PlTThW3iCpSe1wrGqFE18FJ4EC710Rdg4+9bn6rYzsc6bDhnnpLvHfD/uQpTEOR+vUwyoeaJx5DzCUdw9OvDtwqrylM98BBzLvUNVGACo48pUEICNJMaxaAueaRgwX1WFENb/L4cgnYnNnx/8OjH3IBzHDPr/VOYL3D7jwvsJw3kMwgGEEMJQDuPMrgFYSA1CQtABOgmYtQE0DRtbVwLVeAM+mcnhUfdb5+pzAGN2tXmyYOXl6OZ9RP3DlfYuRvE6M4P0PB9BtnowPrbxNYu3TQSLzHECLVnx5DwAJVaGJA3CpFcGjkUcqh5ekBN6yYozm7X9g5fLui6tI/7gdRa4V32qYeVfeNwTwTwLQVsC58j6JAWjNO+n7vpJap5KyX8kAFJy0AM0kMYYKm6gKdQRQTRWo4gDGNl/kACYrT2Cq6lONU2p0kc7CHw+nfTVid96/4Mb7jsyz7DPz2uy7VFL7EMAwHYATZf4xADOvIuNKzvx7VXKqgowgGEATATTqAERwbyiHZ+N1jJFcxgT5WUxRnYBf+yek/ZhUkaLWWfn/h/NRhdqd9wMeA7Dsd5IIoPIR6UsC+IIA7hLADQ5A2zqUdTL/XiUzrpecJOXkSBVgEM41tTQGBHCrr+QAvMQM4AwmUQV82w4gQL0XwTcLEaRK/87kdas3dbb+sxhO5j15/ybzegDWPv/kzI/gzD/sBmCtM5TLPsu8vu/1xmU99CTAUGE9XETUQnV6gCs6gOPwadUDbMfsO9mY1Z78g87a82PovjoxM+/RDfD9UwC+xHAy78wNXn3vt2pbh2YdbcaZ6eZu44+lbaPhNSKMrOXDjQO4Ri1EY0B6BtNaDsKvbR8C1Tsx81YOQu9kIPKLzQgWLX1+O70dt7toFO9HaAGYeabvCOAbAmDt83U3gAvX/7cwtIrap0r7wGJzvnbQ6s3r9WuARgwT1mKEiAGUEUAJVeAi3pcfxxTlIR3ADoTczEXYnXQCSEL0w/WYdMj/nM7qb8PcaZSXZ8WPmlG8/+UAPMm8B5l3p+y7UfY5gEoGwNqHzT53ewBQBbg5nwYrJ63RZ4kbA9UiqkI1BzCq8RKXfS3AQc78jJvZZD6FlIrI+xux4GEsFj1aoenn3u/pU6zrmbsPWPafBPheB9AJx+K7GHhYjv5FTei/n/RJI33WYdBJCYZcbekBIPtdAAeaiVj/O1dXUwVoCm24StkvxrjmzzBBegLTVEXwb/sYQR251EIZBLAFUffXMfP44OtFmCuddUdn+XG8GrIyZjTvJzKvB/iBk8Ppe3gtvQJWKz+FxXLSqhOwWn0K1nFntVpzGtarj8N65WHYfnQIf99eikHnm55qXC9HPhvEDQRQQwA8uNdd4yowpuks3pcdpgocgF/rLszoyETo7WTMubseUV+sweJHyzmAD75egKFLhzz5xHb//KvO0bwuegpqIYad/xrWsWdhtvwYzGPOwiK2GJZrL8FqfQmsNlyD9cZS9N10HTacSkklsE28Apv1F2Cz+ijs1x/FoEvi35h34EtoFmoigHoMr+bDVVQGj7rLZP48vCWnMEl2ANOUu+HfWoAgdRZm3khB+J0NHMDCL5dh8cOFWPooGvOUMx7orBsYvEbZ99KZ9yj7N97IbYTp8lMw/egCzNZcgvm6ElgklMFyYyWsNgtgnVwN66016EuySRPBNo0+U6thu5UPu5QK2G25DrvEi7AlkNdzL2MI78l2Ytl3EtRxLeQqKuUAxjaexnjJMQ5ginwfAeRTBdIw68ZGzLkdi7l3YzD//jIsebgASx/OxbKvIvCqu612LIw42qr24v0Mz7If0XdjBUxWFcN0zWWYrb0GswQezDcKYblZBMuUBlilNcE6Q4K+mVL0zZLCZpsUtiS7bAl9NsEuqx52GTWwT+XDPqUMdgkX0C/5bDcE1/+CWjgLhXCpLieAEgK4iDGNJzBefAiTmvdgqnwnfJW5CGrbilkdCQi/tQZR91Zi/r2FWPhFNJZ+GY5lj0Lhc2i0dkYaXdGlYeZtKLvGq6/AOPYaTOIrYJYohFlSHcyTG2GRKoVlugyWWQpYb1Ohb04L+ua2wiaPqQW2JLt8JezyFLDLbYZ9dhPsM0WwT6uC3aYr6JdazEE48hsJQIRhAgG1EA8ja64RwDmMbTqGCeJ9mNy8Az6KPPgr0zG9JQmhN9Yi4uYqzL3zYTfA4vsRWPJgNqLlPg+ofVbFjKHs21FmjdaUwjiuDCbr+TDZKILp5kaYpUhhniaHRYaKzLfCclsrrHLaYJ3bjr55pHw1bArUsC1oh12hmtRGaoV9gRL2ec14JbsBr2QIYb+5BG8UltLCpobM8zFcWI4RwhK4i87DvZYAGg4RwF5MluRjanMO/BWpCGpJxMz2OIR1rEDkzUWYd2cRFtybSwBhHMCS+9M1BiP21InfO/4IhrEVMFpbCaN4IYw31sFksximKTKYpSphnt4C88xWWGS1EUA7LLPbYZWrhnVeBwEwMYgO2BZ2wG57B2Vf8r15eNp+kwnRq03GR8VahKUctt1S+q1d0lW8c7YazoJKuAivEsBleIhOw7P2lA5gNwHkYaokEwGKJHoHWouQ1rUIVa9EuHoxIm9EI+pWJBbeCyXzIQwABqOu/EtjntQIw7UCGMZXwyixHsZJEpgky2C6VQnTtBaYpbcSQDvMs9phwQGoYZmj7oawZhAEYJPbhjeWf/ol15dPCYvQpCP90q7AmV8CF8FFjBSeg1v1SYyuPYix9XswoSEfExtzMU2SjAD5JgQpYzGzZQVC2xYjQr2AAKIIIALRt2YRxAwsuhcAA6cTX6HPuhoyXwujDQ0w2iSB8RYZjFOUMElVwTS1BabpbTDLaPtdCMt15bAYu6xc5/WZYTE76fiQ4gqMEBTDVXgKHtVH4FV7AOPqdxJADiY1ZWCqOBk+kkQEytYgWPkRZqqWIKxtHuaoQzH3xizMuzkD829Nx8K7BPDm3nvoE1+HPgkNMEyUwDBJBqMtSgJQwTi1FSZpWukhzDIJ5FcQFh9egMn4hO91Hp8bgw5f0ozgfwZ34UHSAQLYg7F1O+BdX4DJjclUgU3wlcQhQBaLGcplpCUIbWUAYYjsCCWAEAIIxMLbfjCwISO9E5rQZ4MYfTZJCUAJQwIwSmmB8VYSg9CBPA3CPK4cppM2w9A57JjO33PDMe/QDVf+YbgJDsGDAEbVEEBtHibUpWBi3WZMbVoLX3EMApqXY7p0CYJl8wkgEhFtoYhUhyCqIxjzb/phwS0fGFhmtBKAGL0TpQQgR58kBQw3q2CY3PIYYuszIDbUkvlNMPXJQO+BE+N1/p4bb69cd9SVT9kXFMFTuBOjhTkYV5OGCaIkTKzdgEl1azGtcRX8xMswvTkaQdJ5mKmIQKhqFiJagxHZ5o8otS/CxRM7DV5OaMbLZL53ogy9NykIQIk+DGDLYwhLmoXezW/B2D0qjN2rwhCaJm0yaIwEZMHUNxNm/nkMIE7n77lh5jTQy61qFzyqCuAp2M4BjBGmYHxNIgHEE0AspjWsgF/jIgSKowggCrMUsxGqCEJ4S5AWoN0X43cOP2fw0gY5Acjw8kY5B9A7ScUBME3Zp0DhNQXKG+RoljZDpZByYtvlIjG2HyuBz7ojMJv+MQG8v0bn77nRf214kXtlvhagahtGCzI4AG9hPCaK1mFK7XL41C8hgAUEMBdBklDMkIZitjwQYcpARKh8Madlmsb0NaM3CUAGDmKjgqQkCCWG5StwWqDArRvtnFqUMsiamyDViW2zffrjp0vovT4ivUnn77kx/POMTndeLgHkEEAmvPhbMFaQCG9BHCbWrMEk0YeYVjcf/o1R8G8Ix3RxGIIlQZghCcQsqR/C5FNpYePK4y7Wa72k66VEOV5KVHIAM/dL0dKiQkd7CyQSMSe5rBmtLQqoyDRTi0oOuVQCibiR0w36rkqpwPTpAfO5i/5OvLHIL92tooDWGGS+MhmjKzfBqyoJY/nrMY6/GhOqYzBZtBRTa6PhWx+JAAIIbJiJYHEgQpoDOICQhimP18e9Vtd0/m2DggAUCC6S4vZNNWeYGWeZVilkaKgX4dyZ0zi4fx8OfrIP5898hsb6Wu6YVMIgmugcCVeNgAD/ebpL/yb62Fu/ObJsm8atPAPuFam03kgigA3wqown82s4gInCpZhcswCTq6MwTRQOv7oQApiB6Q2BCG7yR5Boyg8mr1LrdEfEQd7fEhR4L1tOWVZCLpehmcwzY8xg+fVryMnKQGryZqRvTebEtnO3ZYJXfr0bolnCILhx0vXOO4OG6q7+RDAA19LkLrfyVHhUbIFnRSK9wq8ngDgyvwrj+Usxkc/Mz8OU6ghMq5kN//oQBNQHIagxED4lkx4YP2GehWtkDAM4xZN0tw0zpJRLIRLykZWRhsy0rRxEdmY6J7bN9rHtOpEQCjIuIwBWiRvqVhw7criWrtxLe4Mno6+302y30k1dnhUbMKoiHqMr4gggFuOqlhHAYgKIxvuCaEwRhhPATPjVBiGgLkDjlj3y2Yv58dulGtY62rZhANpBeuTwAaSlbOEMbyMQPQDb1lflxNFP6bty7hx2LoNgrTTGa7SP7vJPjb8v9E53ObJI7XF1xQ9jeCswrvIDjK9ahAlV8zFJMIcUqvEuDnjglOBcZNzP+Pd/1Cq8UP39rZsduuxrjbAq7CjM5zLd03xPiIzUFOzesZ0G9GNwBnCbrpWTl39Rd/m/NoyNjUwrqqr+wWVRZ4IZahY34OOCvN8FYMcYJINl57BPdn6rSoEyvkhjaNXvHd1t/roYOPBtR7rxzyyDemnHQDP2793NDVq94Z7m2Sc7dqBoLxu43Dn687VTbBMGLzwEQ4egdN2t/poY5ekxmfU7ZU7DKsA9sMgM23ft6iWuz3sO4J5ix65fu9IDgJ2rbUGWAO81x2ExYy/M/fM7X7IZ+Kd+73/Zur+X4VtjfvvPDw93t4k6A78wAG0/ayGYieNHD2PrlqTuVmJivc/2nTp+lPuO3ry2jbQQ7JresSc4AE7Be2Dul9tpPHxOUS/jvv/xL81Gg33TzccnqK19c2Dtmw3jd6c9WdEBA/oPoX7voptryATpMYTe1MXic9i5vQB52Vmcdn1ciMsXL9D0KXniez1biD1LHBYffgLAIng3LIN2cbLwye40844Xm3qt4vUZMD6mzwDvGEOSieuCc2aeK3gWU9M6LX1zNVZ+uWBiAFY+2zQvW7/1ZCUNDQ2Ny66X3KOW0bAqPDajNcZaSd2mgqSpHlW8Mk5su71NyR37NQA3iGlCKBfUwnZ20TMBLKfvJO0gfQzLQKbtsAooJBXAyp8pn4znceb1ACZOM5/+H5v83Owzt2+2/0LGfiIjBNLEtQYzVXL5Ij7ZtweFeTnIz9nGVaCAttk+dox9R9tGDEI7eNk0Wniclpgh+14YgLnXarHO7m9j3Lix/tyDrKm+i6qgof7VCPk87KI5nj3I2GyTlZ76hNg+dow9B6r5VbpXCv1zoB1T4k+9MAA2BnRWnx69KE6eONrYQa1CGe3ilZdiW3qahpl81gzExI6x72zLSEclvRfJZVLudeTkFT6Zp/Z5AQDPNa+PwYPfHd7eqvyZ3m26aKb5OSstlRnUMHM9nwF6aWckBpGpnaEyM1BfJ0Jbawtclh97IQBmY2Kf3TZPi5AZwQtOHjvCsvoLtUmXzixBaM0+Nq9VNplmf2fRZ/rWFLBzw9LOw3zm/j8FYOmXrzEa7PfHHoAjR7gsoFflnwpzs1lmuxgIAfxC0lVDJzKdlUnZz8igAZ6N3JwcjFpcAPPgXTDXm/8DABaTUx681HfAn/sn9+uvv+YSs2J5NXsXYmIzjzbzDCJNw7bZPv3xVRn78EaiAGxhZLioGKZBOzizWvNknOk5ABY+mZ3sOaCz8GLC0cEhcO6ciJMbE+JvUyV+YosYJradmLTl0dykPd85bizV9FovRy9aU7B1Bbe6Wy+F4fIymETSqwRl1oIMc6LqWAaRcR2gedhBmE9I7GAPMt0t/5ro3bu3sZ2t7SB68ZvAZEvbbJ/uMLcoMog4wDOg5Wmv+OYuBqFfprK1dp+1DTCME8E4phJWq0p/fuXD4m/6hecLdGf/iTAw+D9CplkP9owmAgAAAABJRU5ErkJggg==" InformativeScreenshot="004de12d264a0430c1fd31ff5f79ed3d.png" Selector="&lt;html app='msedge.exe' title='Sign In | Pega Studio Training Web Application'/&gt;" Url="https://training.openspan.com/login" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

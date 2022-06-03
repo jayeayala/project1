@@ -1,0 +1,222 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Payment5" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="800,1888.66666666667" sap2010:WorkflowViewState.IdRef="Payment5_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Payment5" sap:VirtualizedContainerService.HintSize="810,1824" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Payment" sap:VirtualizedContainerService.HintSize="768,1732" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:DatabaseConnection" Name="DbConnection" />
+        <Variable x:TypeArguments="sd:DataTable" Name="paymentInfo" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="726,58.6666666666667" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=jaye-ayala.database.windows.net;Initial Catalog=DemoDB;User ID=jaye;Password=quantumcreat0r." DatabaseConnection="[DbConnection]" />
+      <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[paymentInfo]" DisplayName="Run query" ExistingDbConnection="[DbConnection]" sap:VirtualizedContainerService.HintSize="726,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select * from Payment where Id like 5">
+        <ui:ExecuteQuery.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:ExecuteQuery.Parameters>
+      </ui:ExecuteQuery>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[paymentInfo]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="726,1414" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="692,1295.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Order | Pega Studio Training Web Application" sap:VirtualizedContainerService.HintSize="650,1203.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="616,985.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NSelectItem DisplayName="Select Item 'Card TypeVisaMastercard'" sap:VirtualizedContainerService.HintSize="574,158" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Visa" ScopeIdentifier="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="3">
+                            <x:String>Card Type</x:String>
+                            <x:String>Visa</x:String>
+                            <x:String>Mastercard</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order" DesignTimeRectangle="464, 630, 260, 27" ElementType="DropDown" FriendlyName="'Visa'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' class='select_middle_size' aaname='' /&gt;" Guid="ad7ab78c-dfad-4b2a-b592-65bbd75b0051" InformativeScreenshot="9914ab1bafd8f93e699798cea280c73e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="464, 626, 966, 51" ElementType="Text" FriendlyName="'Card TypeVisaMastercard'" FullSelectorArgument="&lt;webctrl parentid='credit_card_content' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='credit_card_content' tag='P' type='' class='' aaname='   ' check:innerText='Card Type&amp;#xA;Visa&amp;#xA;Mastercard' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <Parallel sap:VirtualizedContainerService.HintSize="574,98.6666666666667" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT security_code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Text="[row(&quot;SecurityCode&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order" DesignTimeRectangle="563, 555, 261, 36" ElementType="InputBox" FriendlyName="'INPUT security_code'" FullSelectorArgument="&lt;webctrl id='security_code' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='security_code' tag='INPUT' type='text' class='mandatory' aaname='' /&gt;" Guid="a7f9f1c6-a6f1-40be-b1b2-ef8c8e3f3135" ImageBase64="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" InformativeScreenshot="df774bc3d84d1b8af49e639d6e1055a1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT card_number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Text="[row(&quot;CardNumber&quot;).ToString]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order" DesignTimeRectangle="299, 613, 261, 36" ElementType="InputBox" FriendlyName="'INPUT card_number'" FullSelectorArgument="&lt;webctrl id='card_number' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='card_number' tag='INPUT' type='text' class='mandatory' aaname='' /&gt;" Guid="00b6aa45-a095-49bd-9841-c77b93c8e14f" ImageBase64="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" InformativeScreenshot="04baa7a8e9e1da2180d76b40789c7b45.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                      </Parallel>
+                      <uix:NSelectItem DisplayName="Select Item 'Expiration Month'" sap:VirtualizedContainerService.HintSize="574,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="September" ScopeIdentifier="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="13">
+                            <x:String>Expiration Month</x:String>
+                            <x:String>January</x:String>
+                            <x:String>February</x:String>
+                            <x:String>March</x:String>
+                            <x:String>April</x:String>
+                            <x:String>May</x:String>
+                            <x:String>June</x:String>
+                            <x:String>July</x:String>
+                            <x:String>August</x:String>
+                            <x:String>September</x:String>
+                            <x:String>October</x:String>
+                            <x:String>November</x:String>
+                            <x:String>December</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order" DesignTimeRectangle="299, 672, 260, 27" ElementType="DropDown" FriendlyName="'Expiration Month'" FullSelectorArgument="&lt;webctrl id='expiry_month' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='expiry_month' tag='SELECT' type='' class='select_middle_size mandatory' aaname='' /&gt;" Guid="54e24a90-3601-403a-9f05-c9440ff8740b" InformativeScreenshot="bee2fe9717d40149eb25e07c41cd3ec6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem DisplayName="Select Item 'Expiration Year'" sap:VirtualizedContainerService.HintSize="574,158" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="2020" ScopeIdentifier="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Version="V1">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="8">
+                            <x:String>Expiration Year</x:String>
+                            <x:String>2014</x:String>
+                            <x:String>2015</x:String>
+                            <x:String>2016</x:String>
+                            <x:String>2017</x:String>
+                            <x:String>2018</x:String>
+                            <x:String>2019</x:String>
+                            <x:String>2020</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order" DesignTimeRectangle="563, 672, 260, 27" ElementType="DropDown" FriendlyName="'Expiration Year'" FullSelectorArgument="&lt;webctrl id='expiry_year' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='expiry_year' tag='SELECT' type='' class='select_middle_size mandatory' aaname='' /&gt;" Guid="aa893bc7-666b-44c2-b953-53f899dbdc00" InformativeScreenshot="5ed5aae99134515c4585eb5117c25ea5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="574,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="df7c37d7-9ac5-4c27-bbc8-570424628aa1" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://training.openspan.com/order" DesignTimeRectangle="792, 775, 105, 45" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='submit action-button' aaname='Submit' check:text='Submit' /&gt;" Guid="362370d9-7287-4a70-84a6-44dd374633c5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAxCAYAAADQtCfaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAI3SURBVHhe7ZxNbsIwEIU5b7fcpGuugipxiFyAPWyR+HGdKs8ZT8YB6lhl6Pukt0msOJ4vYyIhZRWIOyjNIUnax9c5rD5PzIum9wOSNGsg81oBlOYogNIcBVCaowBKcxRAaY4CKM1RAKU5CqA0RwGU5iiA0hwFUJqjAEpzFNBWWncbrp6z3Rljn845bNM6bmFjjmmTzWGYNjJdyyV0p2tYZ8eWCWgmTS7M4riv/SvoBaXhIXUprdBhmrqO+ztpdmKHDXfjUpp8EnVHZR14uGTnngulmYN+m1GMUczdNRyHs9ni5HElc70fjke6Dse1NFG0nknhxPj++nK+njReXrdnuobJ9ljaWRaWB5pIk0V+uAuqpJWQcz8wPp7PRCbyNbyltGyrUBRfQGqliQLZ27Man+bQ9zoKktcZ5zWk6essLAsBjaTF6O1HoxdWKS1/qbEKWB5fkiPnlQ/b+0pLmdmW5OKqpOkt2DpXHm9LiBHb3j+TpqI6MC26RppRpLGwlHY/M8VHTAnstLsBDTpN3HxELvYnqtNMaWrRski2NFVss4CUNhvZGfPI4uWyUzHU63RJmiyULOpYbEq7E1XQAlmBYmQxShSlmUg5raUZ97OwPND2RUR1SaLwW9dHi+slPfablnfqtGCtpfVR96DmqQ1oK41ZNIDSHAVQmqMASnMUQGmOAijNUQClOQqgNEcBlOYogNIcBVCaowBKcxRAaY4CKM1RAKU5CkjS+G2s1475bSziB0pzRwjfQCQv8yP37w0AAAAASUVORK5CYII=" InformativeScreenshot="8fc5650b4abb3597760fd24b5292ece0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH2SURBVFhH7ZS/SgNBEMZTCGIhprELGhG0MqbRxkJbESGPkM5WEGxs0lgfpLSxtPQNvCeQPIK+wbXpzu+3zsR1vcQoKhb3wcfdzs58Mzv7p1GjRo0av4XN9faRsW2mnwGC4rl4Lw7MHKAxCbGXCZ/Ec3P7HiTQFavEj2y+n9hTjsRmEPsqFDiIhFKy6l5im8Ynk5wPCmiKVD4RiP6dqc80FvadbyvkSMs9IcFVyXORM5HaoSesYt/SVEMOiLpAnDzYVvo3ZWM4dmZisXTxUKyeXhYb251ZiWNWF6GJaS0Nttb+SRElh3kyLpfP7sr1nYM4jk6lhVWfB034SWfVkMBJcGvvOE42EikgZZinUxtbHeLQZGFsKwcavcxSvkFG7jcBOHjbvRt8sd9KPFy9mRiOu2K2ePVYULTiPiaMIYd43z15/OWqhXusr19L7JAWd4NQiuG4uXD9nK3tHs6+gibiol4IreOBefeAaBwKsCFjfLGF59fMAWaj9T0zuY0teX1JmRQR8QJo9yQghea8A/h5F7zgTGQBaPJl7NuIDV8/BzliVOICOFe3MoJ80g6wQi+ITsKgafO+QArMzfaqYT+34qeJHZPgCBpTPElJwmFmYRTiXaIAf9zIF7pi4b8DJaBQzlAoxMx/ByXlZoVDaKYaNWr8NzQaL8eEf+BHvBMgAAAAAElFTkSuQmCC" InformativeScreenshot="6ad308138e53334c35526ba2c2a55cb6.png" Selector="&lt;html app='msedge.exe' title='Order | Pega Studio Training Web Application' /&gt;" Url="https://training.openspan.com/order" />
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
+    </Sequence>
+  </Sequence>
+</Activity>
